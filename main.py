@@ -36,7 +36,10 @@ while playing:
     if player_rect.right >= WIDTH:
         player_speed[0] = -player_speed[0]
 
-    if player_rect.top >= HEIGHT:
+    if player_rect.top <= 0:
+        player_speed[1] = -player_speed[1]
+
+    if player_rect.left <= 0:
         player_speed[1] = -player_speed[1]
   
     main_display.blit(player, player_rect)
