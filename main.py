@@ -13,6 +13,7 @@ main_display = pygame.display.set_mode((WIDTH, HEIGHT))
 player_size = (20, 20)
 player = pygame.Surface(player_size)
 player.fill(COLOR_WHITE)
+player_rect = player.get_rect()
 
 playing = True
 
@@ -21,6 +22,6 @@ while playing:
         if event.type == QUIT:
             playing = False
 
-    main_display.blit(player, (0, 100))
+    main_display.blit(player, player_rect)
 
     pygame.display.flip()
