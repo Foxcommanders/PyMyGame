@@ -7,6 +7,7 @@ HEIGHT = 800
 WIDTH = 1200
 
 COLOR_WHITE = (255, 255, 255)
+COLOR_BLACK = (0, 0, 0)
 
 main_display = pygame.display.set_mode((WIDTH, HEIGHT))
 
@@ -22,6 +23,8 @@ while playing:
     for event in pygame.event.get():
         if event.type == QUIT:
             playing = False
+
+    main_display.fill(COLOR_BLACK)
 
     main_display.blit(player, player_rect)
 
