@@ -18,6 +18,6 @@ while playing:
         if event.type == QUIT:
             playing = False
 
-    main_display.blit(player, (0, 0))
+    main_display.blit(player, (100, 0))
 
     pygame.display.flip()
