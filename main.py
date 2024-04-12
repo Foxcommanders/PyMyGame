@@ -14,6 +14,7 @@ player_size = (20, 20)
 player = pygame.Surface(player_size)
 player.fill(COLOR_WHITE)
 player_rect = player.get_rect()
+player_speed = [1, 1]
 
 playing = True
 
@@ -23,5 +24,7 @@ while playing:
             playing = False
 
     main_display.blit(player, player_rect)
+
+    player_rect = player_rect.move(player_speed)
 
     pygame.display.flip()
