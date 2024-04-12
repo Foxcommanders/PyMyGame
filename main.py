@@ -30,6 +30,9 @@ while playing:
 
     main_display.fill(COLOR_BLACK)
 
+    if player_rect.bottom >= HEIGHT:
+        player_speed = [1, -1]
+
     main_display.blit(player, player_rect)
 
     player_rect = player_rect.move(player_speed)
