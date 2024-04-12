@@ -31,10 +31,13 @@ while playing:
     main_display.fill(COLOR_BLACK)
 
     if player_rect.bottom >= HEIGHT:
-        player_speed = [1, -1]
+        player_speed[1] = -player_speed[1]
      
     if player_rect.right >= WIDTH:
-        player_speed = [-1, -1]
+        player_speed[0] = -player_speed[0]
+
+    if player_rect.top >= HEIGHT:
+        player_speed[1] = -player_speed[1]
   
     main_display.blit(player, player_rect)
 
