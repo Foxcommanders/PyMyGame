@@ -30,7 +30,7 @@ player_move_left = [-1, 0]
 enemy_size = (30, 30)
 enemy = pygame.Surface(enemy_size)
 enemy.fill(COLOR_BLUE)
-enemy_rect = enemy.get_rect()
+enemy_rect = pygame.Rect(WIDTH, 100, *enemy_size)
 enemy_move = [-1, 0]
 
 playing = True
@@ -59,5 +59,7 @@ while playing:
         player_rect = player_rect.move(player_move_left)
        
     main_display.blit(player, player_rect)
+
+    main_display.blit(enemy, enemy_rect)
 
     pygame.display.flip()
