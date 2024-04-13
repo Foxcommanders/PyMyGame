@@ -39,8 +39,8 @@ def create_bonus():
     bonus_size = (15, 15)
     bonus = pygame.Surface(bonus_size)
     bonus.fill(COLOR_GREEN)
-    bonus_rect = pygame.Rect(1, random.randint(HEIGHT, 1), *bonus_size)
-    bonus_move = [random.randint(-6, -1), 0]
+    bonus_rect = pygame.Rect(random.randint(0, WIDTH), HEIGHT *bonus_size)
+    bonus_move = [0, random.randint(-6, -1)]
     return [bonus, bonus_rect, bonus_move]
 
 CREATE_ENEMY = pygame.USEREVENT + 1
@@ -98,3 +98,7 @@ while playing:
     for enemy in enemies:
         if enemy[1].left < 0:
             enemies.pop(enemies.index(enemy))  
+
+    for bonus in bonuses:
+        if bonus[1].left < 0:
+            bonus.pop(bonuses.index(bonus))  
