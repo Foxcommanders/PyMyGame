@@ -30,7 +30,8 @@ player_move_left = [-1, 0]
 enemy_size = (30, 30)
 enemy = pygame.Surface(enemy_size)
 enemy.fill(COLOR_BLUE)
-
+enemy_rect = enemy.get_rect()
+enemy_move = [-1, 0]
 
 playing = True
 
