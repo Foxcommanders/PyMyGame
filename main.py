@@ -27,6 +27,7 @@ player_move_right = [1, 0]
 player_move_up = [0, -1]
 player_move_left = [-1, 0]
 
+def create_enemy():
 enemy_size = (30, 30)
 enemy = pygame.Surface(enemy_size)
 enemy.fill(COLOR_BLUE)
