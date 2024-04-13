@@ -35,10 +35,22 @@ def create_enemy():
     enemy_move = [random.randint(-6, -1), 0]
     return [enemy, enemy_rect, enemy_move]
 
+def create_bonus():
+    bonus_size = (15, 15)
+    bonus = pygame.Surface(bonus_size)
+    bonus.fill(COLOR_BLUE)
+    bonus_rect = pygame.Rect(HEIGHT, random.randint(0, WIDTH), *bonus_size)
+    bonus_move = [random.randint(-6, -1), 0]
+    return [enemy, bonus_rect, bonus_move]
+
 CREATE_ENEMY = pygame.USEREVENT + 1
 pygame.time.set_timer(CREATE_ENEMY, 1500)
 
+CREATE_BONUS = pygame.USEREVENT + 2
+pygame.time.set_timer(CREATE_BONUS, 2500)
+
 enemies = []
+bonuses = []
 
 playing = True
 
@@ -50,6 +62,8 @@ while playing:
             playing = False
         if event.type == CREATE_ENEMY:
             enemies.append(create_enemy())
+        if event.type == CREATE_BONUS:
+            bonuses.append(create_bonus())
 
     main_display.fill(COLOR_BLACK)
 
