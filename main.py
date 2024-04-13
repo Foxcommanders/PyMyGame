@@ -91,7 +91,7 @@ while playing:
        
     main_display.blit(player, player_rect)
 
-    print(len(enemies))
+    print(len(bonuses))
 
     pygame.display.flip()
 
