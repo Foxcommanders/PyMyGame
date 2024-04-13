@@ -38,10 +38,10 @@ def create_enemy():
 def create_bonus():
     bonus_size = (15, 15)
     bonus = pygame.Surface(bonus_size)
-    bonus.fill(COLOR_BLUE)
-    bonus_rect = pygame.Rect(HEIGHT, random.randint(0, WIDTH), *bonus_size)
+    bonus.fill(COLOR_GREEN)
+    bonus_rect = pygame.Rect(1, random.randint(HEIGHT, 1), *bonus_size)
     bonus_move = [random.randint(-6, -1), 0]
-    return [enemy, bonus_rect, bonus_move]
+    return [bonus, bonus_rect, bonus_move]
 
 CREATE_ENEMY = pygame.USEREVENT + 1
 pygame.time.set_timer(CREATE_ENEMY, 1500)
