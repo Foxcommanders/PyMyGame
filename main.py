@@ -67,10 +67,16 @@ while playing:
     if keys[K_LEFT] and player_rect.left > 0:
         player_rect = player_rect.move(player_move_left)
 
-    enemy_rect = enemy_rect.move(enemy_move)
+    for enemy in enemies:
+        enemy[1] = enemy[1].move(enemy[2])
+        main_display.blit(enemy[0], enemy[1])
+
+    # enemy_rect = enemy_rect.move(enemy_move)
        
     main_display.blit(player, player_rect)
 
-    main_display.blit(enemy, enemy_rect)
+    # main_display.blit(enemy, enemy_rect)
+
+    print(len(enemies))
 
     pygame.display.flip()
