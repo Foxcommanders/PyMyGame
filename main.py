@@ -38,6 +38,8 @@ def create_enemy():
 CREATE_ENEMY = pygame.USEREVENT + 1
 pygame.time.set_timer(CREATE_ENEMY, 1500)
 
+enemies = []
+
 playing = True
 
 while playing:
@@ -47,6 +49,7 @@ while playing:
         if event.type == QUIT:
             playing = False
         if event.type == CREATE_ENEMY:
+            enemies.append(create_enemy())
 
     main_display.fill(COLOR_BLACK)
 
