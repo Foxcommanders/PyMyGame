@@ -98,5 +98,5 @@ while playing:
             enemies.pop(enemies.index(enemy))  
 
     for bonus in bonuses:
-        if bonus[1].left < 0:
+        if bonus[1].bottom >= HEIGHT:
             bonuses.pop(bonuses.index(bonus))  
