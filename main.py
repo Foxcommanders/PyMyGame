@@ -50,10 +50,8 @@ while playing:
 
     if keys[K_LEFT] and player_rect.left > 0:
         player_rect = player_rect.move(player_move_left)
-          
-    # if player_rect.left <= 0:
-    #     player_speed = random.choice(([1, 1], [1, -1]))
-
+        
+   
     # if player_rect.bottom >= HEIGHT or player_rect.top <= 0:
     #     player_speed[1] = -player_speed[1]
      
