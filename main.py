@@ -57,6 +57,8 @@ while playing:
 
     if keys[K_LEFT] and player_rect.left > 0:
         player_rect = player_rect.move(player_move_left)
+
+    enemy_rect = enemy_rect.move(enemy_move)
        
     main_display.blit(player, player_rect)
 
