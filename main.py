@@ -31,8 +31,8 @@ def create_enemy():
     enemy_size = (30, 30)
     enemy = pygame.Surface(enemy_size)
     enemy.fill(COLOR_BLUE)
-    enemy_rect = pygame.Rect(WIDTH, 100, *enemy_size)
-    enemy_move = [-1, 0]
+    enemy_rect = pygame.Rect(WIDTH, random.randint(0, HEIGHT), *enemy_size)
+    enemy_move = [random.randint(-6, -1), 0]
     return [enemy, enemy_rect, enemy_move]
 
 CREATE_ENEMY = pygame.USEREVENT + 1
