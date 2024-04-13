@@ -12,6 +12,8 @@ WIDTH = 1200
 
 COLOR_WHITE = (255, 255, 255)
 COLOR_BLACK = (0, 0, 0)
+COLOR_BLUE = (0, 0, 255)
+COLOR_GREEN = (0, 255, 0)
 
 main_display = pygame.display.set_mode((WIDTH, HEIGHT))
 
@@ -27,6 +29,7 @@ player_move_left = [-1, 0]
 
 enemy_size = (30, 30)
 enemy = pygame.Surface(enemy_size)
+enemy.fill(COLOR_BLUE)
 
 
 playing = True
