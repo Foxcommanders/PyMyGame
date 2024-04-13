@@ -33,7 +33,7 @@ def create_enemy():
     enemy.fill(COLOR_BLUE)
     enemy_rect = pygame.Rect(WIDTH, 100, *enemy_size)
     enemy_move = [-1, 0]
-    return enemy, enemy_rect, enemy_move
+    return [enemy, enemy_rect, enemy_move]
 
 CREATE_ENEMY = pygame.USEREVENT + 1
 pygame.time.set_timer(CREATE_ENEMY, 1500)
