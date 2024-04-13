@@ -71,6 +71,4 @@ while playing:
    
     main_display.blit(player, player_rect)
 
-    # player_rect = player_rect.move(player_speed)
-
     pygame.display.flip()
