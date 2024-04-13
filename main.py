@@ -50,11 +50,7 @@ while playing:
 
     if keys[K_LEFT] and player_rect.left > 0:
         player_rect = player_rect.move(player_move_left)
-        
-        
-    # if player_rect.right >= WIDTH or player_rect.left <= 0:
-    #     player_speed[0] = -player_speed[0]
-   
+       
     main_display.blit(player, player_rect)
 
     pygame.display.flip()
