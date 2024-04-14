@@ -19,6 +19,8 @@ COLOR_GREEN = (0, 255, 0)
 
 main_display = pygame.display.set_mode((WIDTH, HEIGHT))
 
+bg = pygame.image.load('background.png')
+
 player_size = (20, 20)
 player = pygame.Surface(player_size)
 player.fill(COLOR_WHITE)
