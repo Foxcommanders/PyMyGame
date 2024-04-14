@@ -10,6 +10,8 @@ FPS = pygame.time.Clock()
 HEIGHT = 800
 WIDTH = 1200
 
+FONT = pygame.font.SysFont('Verdana', 20)
+
 COLOR_WHITE = (255, 255, 255)
 COLOR_BLACK = (0, 0, 0)
 COLOR_BLUE = (0, 0, 255)
