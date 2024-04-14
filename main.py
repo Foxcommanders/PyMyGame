@@ -71,7 +71,9 @@ while playing:
         if event.type == CREATE_BONUS:
             bonuses.append(create_bonus())
 
-    main_display.fill(COLOR_BLACK)
+    # main_display.fill(COLOR_BLACK)
+            
+    main_display.blit(bg, (0, 0))
 
     keys = pygame.key.get_pressed()
 
