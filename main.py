@@ -86,14 +86,14 @@ while playing:
         main_display.blit(enemy[0], enemy[1])
 
         if player_rect.colliderect(enemy[1]):
-            bonuses.pop(bonuses.index(bonus))
+            enemies.pop(enemies.index(enemy))
 
     for bonus in bonuses:
         bonus[1] = bonus[1].move(bonus[2])
         main_display.blit(bonus[0], bonus[1])
 
         if player_rect.colliderect(bonus[1]):
-            print("Yep")
+            bonuses.pop(bonuses.index(bonus))
        
     main_display.blit(player, player_rect)
   
