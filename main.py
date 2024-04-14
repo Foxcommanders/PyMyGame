@@ -97,6 +97,7 @@ while playing:
         main_display.blit(bonus[0], bonus[1])
 
         if player_rect.colliderect(bonus[1]):
+            score += 1
             bonuses.pop(bonuses.index(bonus))
 
     main_display.blit(FONT.render(str(score), True, COLOR_WHITE), (WIDTH-50, 20))       
