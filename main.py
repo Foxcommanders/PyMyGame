@@ -86,7 +86,7 @@ while playing:
         main_display.blit(enemy[0], enemy[1])
 
         if player_rect.colliderect(enemy[1]):
-            enemies.pop(enemies.index(enemy))
+            playing = False
 
     for bonus in bonuses:
         bonus[1] = bonus[1].move(bonus[2])
