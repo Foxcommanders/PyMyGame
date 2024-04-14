@@ -54,6 +54,8 @@ pygame.time.set_timer(CREATE_BONUS, 2500)
 enemies = []
 bonuses = []
 
+score = 0
+
 playing = True
 
 while playing:
