@@ -77,7 +77,13 @@ while playing:
     # main_display.fill(COLOR_BLACK)
     bg_X1 -= bg_move
     bg_X2 -= bg_move
-            
+
+    if bg_X1 < -bg.get_width():
+        bg_X1 = bg.get_width()
+
+    if bg_X2 < -bg.get_width():
+        bg_X2 = bg.get_width()
+
     main_display.blit(bg, (bg_X1, 0))
     main_display.blit(bg, (bg_X2, 0))
 
