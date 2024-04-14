@@ -78,7 +78,8 @@ while playing:
     bg_X1 -= bg_move
     bg_X2 -= bg_move
             
-    main_display.blit(bg, (0, 0))
+    main_display.blit(bg, (bg_X1, 0))
+    main_display.blit(bg, (bg_X2, 0))
 
     keys = pygame.key.get_pressed()
 
