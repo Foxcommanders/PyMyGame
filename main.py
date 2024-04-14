@@ -91,6 +91,9 @@ while playing:
     for bonus in bonuses:
         bonus[1] = bonus[1].move(bonus[2])
         main_display.blit(bonus[0], bonus[1])
+
+        if player_rect.colliderect(bonus[1]):
+            print("Yep")
        
     main_display.blit(player, player_rect)
   
