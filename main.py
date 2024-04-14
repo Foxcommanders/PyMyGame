@@ -75,6 +75,8 @@ while playing:
             bonuses.append(create_bonus())
 
     # main_display.fill(COLOR_BLACK)
+    bg_X1 -= bg_move
+    bg_X2 -= bg_move
             
     main_display.blit(bg, (0, 0))
 
