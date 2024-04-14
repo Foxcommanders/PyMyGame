@@ -98,7 +98,8 @@ while playing:
 
         if player_rect.colliderect(bonus[1]):
             bonuses.pop(bonuses.index(bonus))
-       
+
+    main_display.blit(FONT.render(score, COLOR_WHITE))       
     main_display.blit(player, player_rect)
   
     # print(len(bonuses))
